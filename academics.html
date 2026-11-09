@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academics | Bright Secondary School</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #064e3b;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .school-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .school-name span {
+            color: #facc15;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #e5e7eb;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #022c22;
+            padding: 14px 5%;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 5px 9px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #facc15;
+        }
+
+        /* PAGE BANNER */
+        .banner {
+            background: linear-gradient(
+                rgba(0, 50, 35, 0.85),
+                rgba(0, 50, 35, 0.85)
+            );
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .banner h1 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .banner p {
+            font-size: 17px;
+        }
+
+        /* INTRODUCTION */
+        .introduction {
+            background-color: white;
+            text-align: center;
+            padding: 45px 8%;
+        }
+
+        .introduction h2 {
+            color: #064e3b;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .introduction p {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* SUBJECT SECTIONS */
+        .subjects-section {
+            padding: 50px 8%;
+        }
+
+        .section-title {
+            color: #064e3b;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(220px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .subject-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border-bottom: 4px solid #d4a017;
+            transition: transform 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .subject-card h3 {
+            color: #064e3b;
+            margin-bottom: 10px;
+        }
+
+        /* ACADEMIC LEVELS */
+        .levels {
+            background-color: white;
+            padding: 50px 8%;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(240px, 1fr)
+            );
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .level-card {
+            background-color: #f5f7f5;
+            padding: 28px;
+            border-radius: 8px;
+            border-left: 5px solid #064e3b;
+        }
+
+        .level-card h3 {
+            color: #064e3b;
+            margin-bottom: 12px;
+        }
+
+        /* LEARNING APPROACH */
+        .learning {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .learning h2 {
+            color: #064e3b;
+            margin-bottom: 15px;
+        }
+
+        .learning p {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #022c22;
+            color: white;
+            padding: 35px 8% 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(200px, 1fr)
+            );
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        footer h3 {
+            color: #facc15;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            display: block;
+            color: #e5e7eb;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        footer a:hover {
+            color: #facc15;
+        }
+
+        .copyright {
+            border-top: 1px solid #45665b;
+            padding-top: 15px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+            }
+
+            section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            nav a {
+                font-size: 13px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <div class="school-name">
+                BRIGHT <span>SECONDARY SCHOOL</span>
+            </div>
+
+            <div class="tagline">
+                Empowering Learners for a Brighter Future
+            </div>
+        </div>
+
+        <div>
+            <strong>Academic Programmes</strong>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="academics.html" class="active">Academics</a>
+        <a href="vocational.html">Vocational</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="fees.html">Fees</a>
+        <a href="rules.html">School Rules</a>
+        <a href="teachers.html">Our Teachers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <section class="banner">
+        <h1>Academic Programmes</h1>
+
+        <p>
+            Building knowledge, developing skills and preparing
+            learners for a successful future.
+        </p>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="introduction">
+
+        <h2>Our Academic Excellence</h2>
+
+        <p>
+            Bright Secondary School is committed to supporting
+            learners through quality academic education.
+            Our proposed academic programme covers sciences,
+            languages, humanities, mathematics and technology
+            to promote knowledge, creativity and critical thinking.
+        </p>
+
+    </section>
+
+    <!-- SCIENCE SUBJECTS -->
+    <section class="subjects-section">
+
+        <h2 class="section-title">Science Subjects</h2>
+
+        <p class="section-description">
+            Subjects that promote scientific knowledge,
+            investigation and problem-solving.
+        </p>
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+                <div class="subject-icon">🧪</div>
+                <h3>Chemistry</h3>
+                <p>
+                    Study of matter, chemical reactions
+                    and laboratory experiments.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">🔬</div>
+                <h3>Biology</h3>
+                <p>
+                    Study of living organisms, human biology
+                    and the environment.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">⚡</div>
+                <h3>Physics</h3>
+                <p>
+                    Study of energy, forces, motion,
+                    electricity and matter.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MATHEMATICS AND ICT -->
+    <section class="subjects-section" style="background-color: #e8f3ec;">
+
+        <h2 class="section-title">Mathematics and Technology</h2>
+
+        <p class="section-description">
+            Developing numerical, analytical and digital skills.
+        </p>
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+                <div class="subject-icon">📐</div>
+                <h3>Mathematics</h3>
+                <p>
+                    Development of numerical skills,
+                    logical reasoning and problem-solving.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">💻</div>
+                <h3>Computer Studies / ICT</h3>
+                <p>
+                    Introduction to computers, digital literacy,
+                    information systems and technology.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="subjects-section">
+
+        <h2 class="section-title">Languages</h2>
+
+        <p class="section-description">
+            Improving communication, reading, writing and expression.
+        </p>
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+                <div class="subject-icon">📖</div>
+                <h3>English Language</h3>
+                <p>
+                    Developing communication, grammar,
+                    reading and writing skills.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">🗣️</div>
+                <h3>Kiswahili</h3>
+                <p>
+                    Developing language skills and
+                    communication abilities.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">📚</div>
+                <h3>Literature in English</h3>
+                <p>
+                    Exploring poetry, drama, novels
+                    and other literary works.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HUMANITIES -->
+    <section class="subjects-section" style="background-color: #e8f3ec;">
+
+        <h2 class="section-title">Humanities and Social Sciences</h2>
+
+        <p class="section-description">
+            Understanding society, history, geography
+            and human relationships.
+        </p>
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+                <div class="subject-icon">🌍</div>
+                <h3>Geography</h3>
+                <p>
+                    Study of the environment, physical features,
+                    population and human activities.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">🏛️</div>
+                <h3>History</h3>
+                <p>
+                    Study of past events, historical developments
+                    and their influence on society.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">🤝</div>
+                <h3>Christian Religious Education</h3>
+                <p>
+                    Study of Christian beliefs, values
+                    and moral principles.
+                </p>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon">🌱</div>
+                <h3>Agriculture</h3>
+                <p>
+                    Study of crop production, animal husbandry
+                    and agricultural practices.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ACADEMIC LEVELS -->
+    <section class="levels">
+
+        <h2 class="section-title">Academic Levels</h2>
+
+        <p class="section-description">
+            Proposed secondary education levels.
+            Confirm the classes offered with school management.
+        </p>
+
+        <div class="level-grid">
+
+            <div class="level-card">
+                <h3>Lower Secondary</h3>
+
+                <p>
+                    Focus on foundational knowledge,
+                    essential competencies and broad
+                    learning experiences.
+                </p>
+            </div>
+
+            <div class="level-card">
+                <h3>Upper Secondary</h3>
+
+                <p>
+                    Focus on advanced subject knowledge,
+                    deeper understanding and preparation
+                    for further education.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LEARNING APPROACH -->
+    <section class="learning">
+
+        <h2>Our Approach to Learning</h2>
+
+        <p>
+            We aim to encourage classroom instruction,
+            practical learning, individual participation,
+            teamwork, research and responsible use of ICT.
+            Our goal is to help learners develop knowledge
+            and skills that can be applied in everyday life.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Bright Secondary School</h3>
+
+                <p>
+                    Founded by NGO SAVE THE CHILD.
+                    Building opportunities through education
+                    and skills development.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="admissions.html">Admissions</a>
+            </div>
+
+            <div>
+                <h3>Administration</h3>
+
+                <p>Director</p>
+                <p>Headteacher</p>
+                <p>Deputy Headteacher</p>
+                <p>Director of Studies</p>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+
+                <p>Address: To be provided</p>
+                <p>Telephone: To be provided</p>
+                <p>Email: To be provided</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>
+                &copy; 2026 Bright Secondary School.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bright Secondary School | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #064e3b;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .school-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .school-name span {
+            color: #facc15;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #e5e7eb;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #022c22;
+            padding: 14px 5%;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 470px;
+            background: linear-gradient(
+                rgba(0, 50, 35, 0.78),
+                rgba(0, 50, 35, 0.78)
+            );
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: #facc15;
+            color: #022c22;
+            padding: 13px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 6px;
+        }
+
+        .hero-button:hover {
+            background-color: white;
+        }
+
+        .secondary-button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        /* General sections */
+        section {
+            padding: 55px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #064e3b;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            color: #666;
+        }
+
+        /* Welcome section */
+        .welcome {
+            background-color: white;
+            text-align: center;
+        }
+
+        .welcome p {
+            max-width: 850px;
+            margin: 15px auto;
+        }
+
+        /* Information cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border-bottom: 4px solid #d4a017;
+        }
+
+        .card .icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #064e3b;
+            margin-bottom: 10px;
+        }
+
+        /* Admissions section */
+        .admissions {
+            background-color: #064e3b;
+            color: white;
+            text-align: center;
+        }
+
+        .admissions h2 {
+            color: white;
+        }
+
+        .admissions p {
+            margin: 15px auto 25px;
+            max-width: 700px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #022c22;
+            color: white;
+            padding: 35px 8% 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        footer h3 {
+            color: #facc15;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            display: block;
+            color: #e5e7eb;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        footer a:hover {
+            color: #facc15;
+        }
+
+        .copyright {
+            border-top: 1px solid #45665b;
+            padding-top: 15px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav a {
+                margin: 6px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <div class="school-name">
+                BRIGHT <span>SECONDARY SCHOOL</span>
+            </div>
+            <div class="tagline">
+                Empowering Learners for a Brighter Future
+            </div>
+        </div>
+
+        <div>
+            <strong>Welcome to Our School</strong>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="academics.html">Academics</a>
+        <a href="vocational.html">Vocational</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="fees.html">Fees</a>
+        <a href="rules.html">School Rules</a>
+        <a href="teachers.html">Our Teachers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Bright Secondary School</h1>
+
+            <p>
+                A centre of learning, talent development, practical skills
+                and opportunity for every child.
+            </p>
+
+            <a href="about.html" class="hero-button">
+                Discover Our School
+            </a>
+
+            <a href="admissions.html" class="hero-button secondary-button">
+                Apply for Admission
+            </a>
+        </div>
+    </div>
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome">
+        <h2 class="section-title">A Brighter Future Begins Here</h2>
+
+        <p>
+            Bright Secondary School is an educational institution founded
+            by NGO SAVE THE CHILD. The school is committed to providing
+            educational opportunities and supporting learners through
+            academic learning, practical skills and talent development.
+        </p>
+
+        <p>
+            Our institution brings together academic education, vocational
+            learning and supportive facilities to create opportunities
+            for children from different backgrounds.
+        </p>
+    </section>
+
+    <!-- OUR KEY AREAS -->
+    <section>
+        <h2 class="section-title">Explore Our School</h2>
+
+        <p class="section-intro">
+            Discover the different learning opportunities and facilities
+            available at Bright Secondary School.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <h3>Academic Excellence</h3>
+                <p>
+                    Discover our academic programmes and subjects
+                    offered to learners.
+                </p>
+                <a href="academics.html">Learn More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Computer Laboratory</h3>
+                <p>
+                    Explore our computer learning facilities and
+                    opportunities in ICT.
+                </p>
+                <a href="facilities.html">Explore Facilities</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛠️</div>
+                <h3>Vocational Training</h3>
+                <p>
+                    Learn about practical and vocational skills
+                    programmes offered by the school.
+                </p>
+                <a href="vocational.html">View Courses</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📝</div>
+                <h3>Student Admissions</h3>
+                <p>
+                    Find out how to apply for admission to
+                    Bright Secondary School.
+                </p>
+                <a href="admissions.html">Apply Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ADMISSIONS SECTION -->
+    <section class="admissions">
+        <h2>Join Bright Secondary School Today</h2>
+
+        <p>
+            Give your child an opportunity to learn, grow and develop
+            academic and practical skills in a supportive learning
+            environment.
+        </p>
+
+        <a href="admissions.html" class="hero-button">
+            Start Your Application
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Bright Secondary School</h3>
+                <p>
+                    Founded by NGO SAVE THE CHILD.
+                    Building opportunities through education
+                    and skills development.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="facilities.html">Our Facilities</a>
+                <a href="academics.html">Academics</a>
+                <a href="admissions.html">Admissions</a>
+            </div>
+
+            <div>
+                <h3>Administration</h3>
+                <p>Director</p>
+                <p>Headteacher</p>
+                <p>Deputy Headteacher</p>
+                <p>Director of Studies</p>
+            </div>
+
+            <div>
+                <h3>Contact Information</h3>
+                <p>School address: To be provided</p>
+                <p>Telephone: To be provided</p>
+                <p>Email: To be provided</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>
+                &copy; 2026 Bright Secondary School.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

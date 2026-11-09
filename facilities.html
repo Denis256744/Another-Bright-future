@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>School Facilities | Bright Secondary School</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #064e3b;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .school-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .school-name span {
+            color: #facc15;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #e5e7eb;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #022c22;
+            padding: 14px 5%;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 5px 9px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #facc15;
+        }
+
+        /* PAGE BANNER */
+        .banner {
+            background: linear-gradient(
+                rgba(0, 50, 35, 0.82),
+                rgba(0, 50, 35, 0.82)
+            );
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .banner h1 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .banner p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* INTRODUCTION */
+        .introduction {
+            text-align: center;
+            padding: 40px 8% 20px;
+        }
+
+        .introduction h2 {
+            color: #064e3b;
+            font-size: 29px;
+            margin-bottom: 12px;
+        }
+
+        .introduction p {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* FACILITY GALLERY */
+        .gallery {
+            padding: 35px 7% 60px;
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(260px, 1fr)
+            );
+            gap: 28px;
+        }
+
+        .facility-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+            transition: transform 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-card img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #dce7df;
+        }
+
+        .facility-info {
+            padding: 22px;
+        }
+
+        .facility-info h2 {
+            color: #064e3b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .facility-info p {
+            margin-bottom: 12px;
+        }
+
+        .facility-label {
+            display: inline-block;
+            background-color: #e7f3ec;
+            color: #064e3b;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* ACCESSIBILITY MESSAGE */
+        .inclusion {
+            background-color: #e8f3ec;
+            padding: 45px 8%;
+            text-align: center;
+        }
+
+        .inclusion h2 {
+            color: #064e3b;
+            margin-bottom: 12px;
+        }
+
+        .inclusion p {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #022c22;
+            color: white;
+            padding: 35px 8% 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(200px, 1fr)
+            );
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        footer h3 {
+            color: #facc15;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            display: block;
+            color: #e5e7eb;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        footer a:hover {
+            color: #facc15;
+        }
+
+        .copyright {
+            border-top: 1px solid #45665b;
+            padding-top: 15px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* MOBILE DEVICES */
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+            }
+
+            .gallery {
+                padding: 25px 5% 40px;
+            }
+
+            nav a {
+                font-size: 13px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <div class="school-name">
+                BRIGHT <span>SECONDARY SCHOOL</span>
+            </div>
+            <div class="tagline">
+                Empowering Learners for a Brighter Future
+            </div>
+        </div>
+
+        <div>
+            <strong>Our Facilities</strong>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="facilities.html" class="active">Facilities</a>
+        <a href="academics.html">Academics</a>
+        <a href="vocational.html">Vocational</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="fees.html">Fees</a>
+        <a href="rules.html">School Rules</a>
+        <a href="teachers.html">Our Teachers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <section class="banner">
+        <h1>Our School Facilities</h1>
+        <p>
+            Discover the learning spaces, practical training areas
+            and support facilities featured in our school development.
+        </p>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="introduction">
+        <h2>Learning Beyond the Classroom</h2>
+
+        <p>
+            Bright Secondary School aims to support academic learning,
+            practical skills development and inclusive education.
+            Explore the six facility categories below. Replace the
+            sample images with approved photographs of the actual
+            school facilities before publishing the website.
+        </p>
+    </section>
+
+    <!-- FACILITY GALLERY -->
+    <main class="gallery">
+
+        <!-- 1. DORMITORIES -->
+        <article class="facility-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80"
+                alt="Example of a residential building"
+                width="900"
+                height="600"
+                loading="lazy"
+            >
+
+            <div class="facility-info">
+                <h2>Student Dormitories</h2>
+
+                <p>
+                    Residential accommodation is an important facility
+                    for learners who require a place to stay during
+                    the school term. Approved school photographs can
+                    showcase the dormitory buildings and living spaces.
+                </p>
+
+                <span class="facility-label">
+                    Accommodation
+                </span>
+            </div>
+
+        </article>
+
+        <!-- 2. COMPUTER LAB -->
+        <article class="facility-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                alt="Computers and equipment in a workspace"
+                width="900"
+                height="600"
+                loading="lazy"
+            >
+
+            <div class="facility-info">
+                <h2>Computer Laboratory</h2>
+
+                <p>
+                    The computer laboratory is intended to support
+                    ICT education, computer literacy, digital research
+                    and the development of technology skills.
+                </p>
+
+                <span class="facility-label">
+                    Information Technology
+                </span>
+            </div>
+
+        </article>
+
+        <!-- 3. SCHOOL FARM -->
+        <article class="facility-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+                alt="Green agricultural fields"
+                width="900"
+                height="600"
+                loading="lazy"
+            >
+
+            <div class="facility-info">
+                <h2>School Farm</h2>
+
+                <p>
+                    The school farm can provide opportunities for
+                    practical agricultural learning, crop production,
+                    environmental awareness and demonstrations of
+                    farming methods.
+                </p>
+
+                <span class="facility-label">
+                    Agriculture
+                </span>
+            </div>
+
+        </article>
+
+        <!-- 4. KINDERGARTEN -->
+        <article class="facility-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80"
+                alt="Young children learning and playing"
+                width="900"
+                height="600"
+                loading="lazy"
+            >
+
+            <div class="facility-info">
+                <h2>Kindergarten Section</h2>
+
+                <p>
+                    The kindergarten section is intended to provide
+                    young children with a supportive environment
+                    for early learning, play, creativity and social
+                    development.
+                </p>
+
+                <span class="facility-label">
+                    Early Childhood Education
+                </span>
+            </div>
+
+        </article>
+
+        <!-- 5. VOCATIONAL SECTION -->
+        <article class="facility-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"
+                alt="Practical technical work and equipment"
+                width="900"
+                height="600"
+                loading="lazy"
+            >
+
+            <div class="facility-info">
+                <h2>Vocational Training Section</h2>
+
+                <p>
+                    Vocational training focuses on practical learning
+                    and the development of employable skills.
+                    The workshop photographs should represent the
+                    actual courses and equipment available at school.
+                </p>
+
+                <span class="facility-label">
+                    Practical Skills
+                </span>
+            </div>
+
+        </article>
+
+        <!-- 6. ORPHANAGE AND INCLUSIVE SUPPORT -->
+        <article class="facility-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80"
+                alt="Children participating in a group activity"
+                width="900"
+                height="600"
+                loading="lazy"
+            >
+
+            <div class="facility-info">
+                <h2>Orphanage and Disability Support</h2>
+
+                <p>
+                    This facility category highlights care and
+                    educational support for children with disabilities.
+                    The school should showcase accessible spaces,
+                    learning resources and support services that
+                    are actually available.
+                </p>
+
+                <span class="facility-label">
+                    Inclusive Support
+                </span>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- INCLUSIVE EDUCATION -->
+    <section class="inclusion">
+
+        <h2>Education and Opportunity for Every Child</h2>
+
+        <p>
+            Bright Secondary School aims to promote an inclusive
+            learning environment in which learners are treated
+            with dignity and respect. Where available, accessible
+            facilities and assistive learning resources should
+            be showcased to help families understand the support
+            offered by the institution.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Bright Secondary School</h3>
+                <p>
+                    Founded by NGO SAVE THE CHILD.
+                    Building opportunities through education
+                    and skills development.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="academics.html">Academics</a>
+                <a href="admissions.html">Admissions</a>
+            </div>
+
+            <div>
+                <h3>Administration</h3>
+                <p>Director</p>
+                <p>Headteacher</p>
+                <p>Deputy Headteacher</p>
+                <p>Director of Studies</p>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>Address: To be provided</p>
+                <p>Telephone: To be provided</p>
+                <p>Email: To be provided</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>
+                &copy; 2026 Bright Secondary School.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

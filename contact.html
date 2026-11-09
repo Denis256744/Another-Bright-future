@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Bright Secondary School</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        nav {
+            background-color: #022c22;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 10px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        .banner {
+            background-color: #047857;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .banner h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: #064e3b;
+            margin-bottom: 10px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 23px;
+            border-radius: 9px;
+            border-top: 5px solid #047857;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .contact-card h3 {
+            color: #064e3b;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card a {
+            color: #047857;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 9px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-top: 35px;
+        }
+
+        .contact-form-section h2 {
+            color: #064e3b;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b8c5bf;
+            border-radius: 5px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: 2px solid #047857;
+            border-color: #047857;
+        }
+
+        .submit-button {
+            background-color: #047857;
+            color: white;
+            border: none;
+            padding: 13px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submit-button:hover {
+            background-color: #064e3b;
+        }
+
+        .notice {
+            background-color: #fff7d6;
+            border-left: 5px solid #eab308;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #022c22;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            .banner h2 {
+                font-size: 25px;
+            }
+
+            nav a {
+                font-size: 14px;
+                margin: 5px;
+            }
+
+            .contact-form-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>BRIGHT SECONDARY SCHOOL</h1>
+        <p>Founded by SAVE THE CHILD NGO</p>
+        <p>Education, Skills and a Brighter Future</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="academics.html">Academics</a>
+        <a href="vocational.html">Vocational Training</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="fees.html">School Fees</a>
+        <a href="rules.html">School Rules</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="banner">
+        <h2>Contact Bright Secondary School</h2>
+        <p>We welcome enquiries from parents, guardians, students and visitors.</p>
+    </section>
+
+    <div class="container">
+
+        <section class="intro">
+            <h2>Get in Touch With Our Administration</h2>
+
+            <p>
+                Contact the appropriate school administrator for enquiries
+                about admissions, academic programmes, school fees and
+                general school operations.
+            </p>
+        </section>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <h3>Director</h3>
+                <p><strong>Name:</strong> To be provided by the school</p>
+                <p><strong>Responsibility:</strong> Overall school leadership and administration.</p>
+                <p><strong>Telephone:</strong> To be provided</p>
+                <p><strong>Email:</strong> To be provided</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Headteacher</h3>
+                <p><strong>Name:</strong> To be provided by the school</p>
+                <p><strong>Responsibility:</strong> Daily school management and student welfare.</p>
+                <p><strong>Telephone:</strong> To be provided</p>
+                <p><strong>Email:</strong> To be provided</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Deputy Headteacher</h3>
+                <p><strong>Name:</strong> To be provided by the school</p>
+                <p><strong>Responsibility:</strong> Supporting school administration and student discipline.</p>
+                <p><strong>Telephone:</strong> To be provided</p>
+                <p><strong>Email:</strong> To be provided</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Director of Studies</h3>
+                <p><strong>Name:</strong> To be provided by the school</p>
+                <p><strong>Responsibility:</strong> Academic programmes, examinations and teaching coordination.</p>
+                <p><strong>Telephone:</strong> To be provided</p>
+                <p><strong>Email:</strong> To be provided</p>
+            </div>
+
+        </div>
+
+        <section class="contact-form-section">
+            <h2>Send Us an Enquiry</h2>
+
+            <p>
+                Complete the form below to prepare your enquiry
+                for the school administration.
+            </p>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="name">Your Full Name *</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telephone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="Enter your telephone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Enquiry Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose an enquiry subject</option>
+                        <option value="Admissions">Student Admissions</option>
+                        <option value="Fees">School Fees</option>
+                        <option value="Academics">Academic Programmes</option>
+                        <option value="Vocational">Vocational Training</option>
+                        <option value="Facilities">School Facilities</option>
+                        <option value="Other">Other Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message"
+                              placeholder="Write your enquiry here..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Send Enquiry
+                </button>
+
+            </form>
+        </section>
+
+        <div class="notice">
+            <strong>Contact Information Notice:</strong>
+            The school has not provided official telephone numbers,
+            email addresses or administrator names in the project
+            information available to us. Replace the placeholders
+            with verified details before publishing the website.
+            The enquiry form is currently a frontend demonstration
+            and will not send messages until connected to a backend.
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bright Secondary School. All Rights Reserved.</p>
+        <p>Founded by SAVE THE CHILD NGO</p>
+        <p>Education for a brighter future.</p>
+    </footer>
+
+</body>
+</html>

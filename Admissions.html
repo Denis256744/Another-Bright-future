@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admissions | Bright Secondary School</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        nav {
+            background-color: #022c22;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 10px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        .banner {
+            background-color: #047857;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .banner h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 35px auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .intro h2 {
+            color: #064e3b;
+            margin-bottom: 10px;
+        }
+
+        .application-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        fieldset {
+            border: 1px solid #cbd5d1;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 7px;
+        }
+
+        legend {
+            color: #064e3b;
+            font-size: 19px;
+            font-weight: bold;
+            padding: 0 8px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #b8c5bf;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #047857;
+            border-color: #047857;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .submit-button {
+            background-color: #047857;
+            color: white;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #064e3b;
+        }
+
+        .notice {
+            background-color: #fff7d6;
+            border-left: 5px solid #eab308;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #022c22;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            .banner h2 {
+                font-size: 25px;
+            }
+
+            .application-form {
+                padding: 18px;
+            }
+
+            nav a {
+                font-size: 14px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>BRIGHT SECONDARY SCHOOL</h1>
+        <p>Founded by SAVE THE CHILD NGO</p>
+        <p>Education, Skills and a Brighter Future</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="academics.html">Academics</a>
+        <a href="vocational.html">Vocational Training</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="fees.html">School Fees</a>
+        <a href="rules.html">School Rules</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="banner">
+        <h2>Student Admissions</h2>
+        <p>Apply today and become part of the Bright Secondary School family.</p>
+    </section>
+
+    <div class="container">
+
+        <section class="intro">
+            <h2>Online Student Application Form</h2>
+
+            <p>
+                Prospective students and their parents or guardians
+                can use this form to provide information for an
+                admission application.
+            </p>
+        </section>
+
+        <form class="application-form" action="#" method="post">
+
+            <fieldset>
+                <legend>1. Student Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="fullname">Student Full Name *</label>
+                    <input type="text" id="fullname" name="fullname"
+                           placeholder="Enter student's full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Prefer to specify another option</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality"
+                           placeholder="Enter nationality">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Home Address *</label>
+                    <textarea id="address" name="address"
+                              placeholder="Enter student's home address" required></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Parent or Guardian Information</legend>
+
+                <div class="form-group">
+                    <label for="guardian">Parent/Guardian Full Name *</label>
+                    <input type="text" id="guardian" name="guardian"
+                           placeholder="Enter parent or guardian name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="relationship">Relationship to Student *</label>
+                    <select id="relationship" name="relationship" required>
+                        <option value="">Select Relationship</option>
+                        <option value="Father">Father</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Guardian">Guardian</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Parent/Guardian Phone Number *</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="Enter phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Parent/Guardian Email Address</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="example@email.com">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Academic Information</legend>
+
+                <div class="form-group">
+                    <label for="previous">Previous School</label>
+                    <input type="text" id="previous" name="previous"
+                           placeholder="Enter previous school">
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class Applying For *</label>
+                    <select id="class" name="class" required>
+                        <option value="">Select Class</option>
+                        <option value="S1">Senior One</option>
+                        <option value="S2">Senior Two</option>
+                        <option value="S3">Senior Three</option>
+                        <option value="S4">Senior Four</option>
+                        <option value="S5">Senior Five</option>
+                        <option value="S6">Senior Six</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year of Admission</label>
+                    <select id="year" name="year">
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                    </select>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Additional Information</legend>
+
+                <div class="form-group">
+                    <label for="support">Special Learning or Accessibility Support</label>
+                    <textarea id="support" name="support"
+                              placeholder="If applicable, describe any learning or accessibility support the student may need."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Why do you want to join Bright Secondary School?</label>
+                    <textarea id="reason" name="reason"
+                              placeholder="Write a short explanation"></textarea>
+                </div>
+
+            </fieldset>
+
+            <button type="submit" class="submit-button">
+                Submit Application
+            </button>
+
+        </form>
+
+        <div class="notice">
+            <strong>Application Notice:</strong>
+            Completing this form does not guarantee admission.
+            The school administration will review applications
+            and communicate the next steps.
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bright Secondary School. All Rights Reserved.</p>
+        <p>Founded by SAVE THE CHILD NGO</p>
+        <p>Education for a brighter future.</p>
+    </footer>
+
+</body>
+</html>
